@@ -11,7 +11,7 @@ using MoonSharp.Interpreter;
 public class GlobalControls : MonoBehaviour {
     public static string CYFversion       = "0.6.6";    // Current version of CYF displayed in the main menu and usable in scripts
     public static string OverworldVersion = "0.6.6";    // Last version in which the overworld was changed, notifying any user with an old save to delete it
-    public static int    LTSversion       = 3;          // LTS version, mainly used for CYF 0.6.6
+    public static int    LTSversion       = 4;          // LTS version, mainly used for CYF 0.6.6
     public static int    BetaVersion      = 0;          // Only used for beta versions
 
     public static int frame;                        // Frame counter used for logging purposes
