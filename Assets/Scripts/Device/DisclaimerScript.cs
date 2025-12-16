@@ -8,6 +8,8 @@ using System.Collections;
 /// </summary>
 public class DisclaimerScript : MonoBehaviour {
     public GameObject Logo, LogoCrate, RedditPlug, LegalStuff, ModSelection, Overworld, LuaKnowledgeDisclaimer, Version;
+    private bool inCredits = false;
+    private int creditsCameraSpeed = 0;
 
     private void Start() {
         if (GlobalControls.crate) {
@@ -28,6 +30,8 @@ public class DisclaimerScript : MonoBehaviour {
             Version.GetComponent<Text>().text = "v" + GlobalControls.CYFversion + "\nLTS " + (GlobalControls.LTSversion + 1) + "\n<color=\"#00ff00\">b" + GlobalControls.BetaVersion + "</color>";
         else
             Version.GetComponent<Text>().text = "v" + GlobalControls.CYFversion + "\nLTS " + GlobalControls.LTSversion;
+        Camera.main.GetComponent<AudioSource>().clip = AudioClipRegistry.GetMusic("mus_barrier");
+        Camera.main.GetComponent<AudioSource>().Play();
     }
 
     /// <summary>
@@ -35,6 +39,13 @@ public class DisclaimerScript : MonoBehaviour {
     /// </summary>
     private void Update() {
         if (!ScreenResolution.hasInitialized) return;
+        if (inCredits) {
+            UpdateCreditsScroll();
+            if (creditsCameraSpeed == 0 && inCredits && GlobalControls.input.Up == ButtonState.PRESSED) {
+                EndCreditsScroll();
+            }
+            return;
+        }
         if (GlobalControls.input.Menu == ButtonState.PRESSED) {
             #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
                 Misc.RetargetWindow();
@@ -48,7 +59,38 @@ public class DisclaimerScript : MonoBehaviour {
                 Misc.RetargetWindow();
             #endif
             StartCoroutine(ModSelect());
+        } else if (GlobalControls.input.Down == ButtonState.PRESSED) {
+            StartCreditsScroll();
         }
+    }
+
+    /// <summary>
+    /// Starts the camera shift to the Credits screen.
+    /// </summary>
+    private void StartCreditsScroll() {
+        creditsCameraSpeed = -8;
+        inCredits = true;
+    }
+
+    /// <summary>
+    /// Updates the scroll to and from the Credits screen.
+    /// </summary>
+    private void UpdateCreditsScroll() {
+        if (creditsCameraSpeed != 0) {
+            transform.localPosition += new Vector3(0, creditsCameraSpeed, 0);
+            if (Mathf.Abs(transform.localPosition.y) >= 240) {
+                inCredits = transform.localPosition.y < 0;
+                transform.localPosition = new Vector3(transform.localPosition.x, 240 * Mathf.Sign(transform.localPosition.y), transform.localPosition.z);
+                creditsCameraSpeed = 0;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Starts the camera shift back to the Disclaimer screen.
+    /// </summary>
+    private void EndCreditsScroll() {
+        creditsCameraSpeed = 8;
     }
 
     // The mod select screen can take some extra time to load,
