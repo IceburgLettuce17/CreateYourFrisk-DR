@@ -68,6 +68,7 @@ public class TransitionOverworld : MonoBehaviour {
         DontDestroyOnLoad(GameObject.Find("Canvas Two"));
         DontDestroyOnLoad(GameObject.Find("Player").transform.parent.gameObject);
         DontDestroyOnLoad(GameObject.Find("Main Camera OW"));
+		DontDestroyOnLoad(GameObject.Find("DebugGUI"));
         string mapName;
         if (!isStart)
             try {

@@ -261,15 +261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &37236981
@@ -421,15 +421,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1001 &43590226
@@ -711,15 +711,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &147928540
@@ -982,15 +982,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &247211483
@@ -1231,15 +1231,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 534
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &260230355
@@ -1391,15 +1391,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &268140599
@@ -1551,15 +1551,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &373771159
@@ -1711,15 +1711,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &424356986
@@ -1948,15 +1948,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &495211062
@@ -2207,15 +2207,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &566465743
@@ -2367,15 +2367,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &573195106
@@ -2527,15 +2527,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1001 &586924196
@@ -3208,15 +3208,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &634136909
@@ -3560,15 +3560,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &738094585
@@ -3720,15 +3720,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &743800823
@@ -3957,15 +3957,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &770504841
@@ -4193,15 +4193,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &820532155
@@ -4353,15 +4353,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &835577667
@@ -4595,15 +4595,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &891869946
@@ -4755,15 +4755,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &911517697 stripped
@@ -4934,15 +4934,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &952942991
@@ -5171,15 +5171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1024388664
@@ -5332,15 +5332,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: $
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 320
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1101770078
@@ -5492,15 +5492,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1117834468
@@ -5800,15 +5800,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1168944911
@@ -6124,15 +6124,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1369875159
@@ -6609,15 +6609,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!224 &1779322336
@@ -6797,15 +6797,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1805120651
@@ -7119,15 +7119,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1901620771
@@ -7345,15 +7345,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1942351437
@@ -7556,15 +7556,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: $
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 320
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &1977618864
@@ -7716,15 +7716,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &2006300309
@@ -7876,15 +7876,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &2020485660
@@ -8325,17 +8325,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
+--- !u!1 &2061635193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061635195}
+  - component: {fileID: 2061635194}
+  m_Layer: 0
+  m_Name: DebugGUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2061635194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061635193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3e0ad010a49404094913ef2a8853de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideGUI: 1
+  tutString: 
+  debugTextStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  LastIndex: 999
+--- !u!4 &2061635195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061635193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 382.15222, y: 120.55216, z: -3.6655698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064810220
 GameObject:
   m_ObjectHideFlags: 0
@@ -8485,15 +8598,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &2078350986
@@ -8722,15 +8835,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0
 --- !u!1 &2105879891
@@ -8882,14 +8995,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dc5aa61b3446942acd3e628a7d73d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterSound: (
+  letterAdjustShifts: []
+  fontVoice: 
   currentLine: 0
   _textMaxWidth: 0
   currentCharacter: 0
   currentReferenceCharacter: 0
-  nextMonsterDialogueOnce: 0
-  wasStated: 0
-  localPosition: {x: 0, y: 0}
-  blockSkip: 0
+  currentSkippable: 1
+  columnShift: 265
+  columnNumber: 2
   skipNowIfBlocked: 0
   lateStartWaiting: 0

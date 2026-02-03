@@ -12,7 +12,7 @@ public class Title : MonoBehaviour {
     private readonly string[] secondPhaseEventNames = { "No", "Yes" };
 
     public TextManager tmName, TextManagerName, TextManagerLevel, TextManagerTime, TextManagerMap;
-    public GameObject Logo, LogoCrate, RetromodeCanvas;
+    public GameObject Logo, RetromodeCanvas;
     public SpriteRenderer PressEnterOrZ;
 
     // Use this for initialization
@@ -23,7 +23,7 @@ public class Title : MonoBehaviour {
             new ControlPanel();
             new PlayerCharacter();
             #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-                Misc.WindowName = GlobalControls.crate ? ControlPanel.instance.WinodwBsaisNmae : ControlPanel.instance.WindowBasisName;
+                Misc.WindowName = ControlPanel.instance.WindowBasisName;
             #endif
             SaveLoad.LoadPermanentGlobals();
             LuaScriptBinder.SetSessionGlobal("ModFolder", MoonSharp.Interpreter.DynValue.NewString("@Title"));
@@ -38,10 +38,6 @@ public class Title : MonoBehaviour {
         diff = calcTotalLength(tmName);
         actualX = tmName.transform.localPosition.x;
         actualY = tmName.transform.localPosition.y;
-        if (GlobalControls.crate) {
-            Logo.GetComponent<SpriteRenderer>().enabled = false;
-            LogoCrate.GetComponent<SpriteRenderer>().enabled = true;
-        }
         DontDestroyOnLoad(Camera.main.gameObject);
         StartCoroutine(TitlePhase1());
     }
@@ -76,14 +72,13 @@ public class Title : MonoBehaviour {
                         } else {
                             PressEnterOrZ.gameObject.SetActive(false);
                             Logo.SetActive(false);
-                            LogoCrate.SetActive(false);
                             GameObject.Find("Back1").SetActive(false);
                             TextManagerName.SetHorizontalSpacing(2);
                             TextManagerLevel.SetHorizontalSpacing(2);
                             TextManagerTime.SetHorizontalSpacing(2);
                             TextManagerMap.SetHorizontalSpacing(2);
                             TextManagerName.SetTextQueue(new[] { new TextMessage(PlayerCharacter.instance.Name, false, true) });
-                            TextManagerLevel.SetTextQueue(new[] { new TextMessage((GlobalControls.crate ? "VL" : "LV") + PlayerCharacter.instance.LV, false, true) });
+                            TextManagerLevel.SetTextQueue(new[] { new TextMessage("LV" + PlayerCharacter.instance.LV, false, true) });
                             TextManagerTime.SetTextQueue(new[] {new TextMessage(UnitaleUtil.TimeFormatter(SaveLoad.savedGame.playerTime), false, true) });
                             TextManagerMap.SetTextQueue(new[] { new TextMessage(SaveLoad.savedGame.lastScene, false, true) });
                             tmName.SetTextQueue(new[] { new TextMessage(PlayerCharacter.instance.Name, false, true) });
@@ -92,14 +87,7 @@ public class Title : MonoBehaviour {
                         }
                     } catch {
                         GlobalControls.allowWipeSave = true;
-                        if (GlobalControls.crate)
-                            UnitaleUtil.DisplayLuaError(StaticInits.ENCOUNTER, "U USED AN ODL VERSOIN OF CFY? IT ISN'T COMAPTIBEL.\n\n"
-                                                                             + "DELEET UR SAVE OT NOT HVAE DA ERRRO AGAIN. HREE: <b>\n"
-                                                                             + Application.persistentDataPath + "/save.gd</b>\n\n"
-                                                                             + "OR <b>PERS R NWO</b> TO DELEET SAV N CLOSE YCF.\n\n\n"
-                                                                             + "IF MOAR PORBLMES, TELL EM! :D\n\n");
-                        else
-                            UnitaleUtil.DisplayLuaError(StaticInits.ENCOUNTER, "Have you saved on a previous or newer version of CYF? Your save isn't compatible with this version.\n\n"
+						UnitaleUtil.DisplayLuaError(StaticInits.ENCOUNTER, "Have you saved on a previous or newer version of CYF? Your save isn't compatible with this version.\n\n"
                                                                              + "To fix this, you must delete your save file. It can be found here: \n<b>"
                                                                              + Application.persistentDataPath + "/save.gd</b>\n\n"
                                                                              + "Or, you can <b>Press R now</b> to delete your save and close CYF.\n\n\n"

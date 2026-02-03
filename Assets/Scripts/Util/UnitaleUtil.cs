@@ -83,15 +83,22 @@ public static class UnitaleUtil {
     /// <param name="decoratedMessage">Error that was thrown. In MoonSharp's case, this is the DecoratedMessage property from its InterpreterExceptions.</param>
     /// <param name="DoNotDecorateMessage">Set to true to hide "error in script x" at the top. This arg is true when using error(..., 0).</param>
     public static void DisplayLuaError(string source, string decoratedMessage, bool DoNotDecorateMessage = false) {
-        if (firstErrorShown)
-            return;
-        firstErrorShown = true;
-        ScreenResolution.ResetAfterBattle();
-        ErrorDisplay.Message = (!DoNotDecorateMessage ? "error in script " + source + "\n\n" : "") + decoratedMessage;
-        if (Application.isEditor) SceneManager.LoadSceneAsync("Error"); // prevents editor from crashing
-        else                      SceneManager.LoadScene("Error");
-        Debug.Log("It's a Lua error! : " + ErrorDisplay.Message);
-        ScreenResolution.wideFullscreen = true;
+		if (firstErrorShown)
+			return;
+		firstErrorShown = true;
+		ScreenResolution.ResetAfterBattle();
+		ErrorDisplay.Message = (!DoNotDecorateMessage ? "error in script " + source + "\n\n" : "") + decoratedMessage;
+		if (!GlobalControls.errorBypass)
+		{
+			if (Application.isEditor) SceneManager.LoadSceneAsync("Error"); // prevents editor from crashing
+			else                      SceneManager.LoadScene("Error");
+			Debug.Log("It's a Lua error! : " + ErrorDisplay.Message);
+			ScreenResolution.wideFullscreen = true;
+		}
+		else
+		{
+			Debug.Log("Error was thrown, but GlobalControls.errorBypass is true - error : " + ErrorDisplay.Message);
+		}
     }
 
     /// <summary>
@@ -101,6 +108,8 @@ public static class UnitaleUtil {
     /// <param name="function">Name of the function, used for the error message</param>
     /// <param name="e">Exception to handle</param>
     public static void HandleError(string scriptname, string function, Exception e) {
+		if (GlobalControls.errorBypass)
+			return;
         if (e as InterpreterException != null) {
             InterpreterException ie = e as InterpreterException;
             DisplayLuaError(scriptname, ie.DecoratedMessage == null ? ie.Message : FormatErrorSource(ie.DecoratedMessage, ie.Message) + ie.Message, ie.DoNotDecorateMessage);

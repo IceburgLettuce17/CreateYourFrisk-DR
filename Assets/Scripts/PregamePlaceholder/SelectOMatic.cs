@@ -111,24 +111,6 @@ public class SelectOMatic : MonoBehaviour {
             });
         }
 
-        // Crate Your Frisk initializer
-        if (GlobalControls.crate) {
-            //Exit button
-            ExitText.text   = "← BYEE (RATIO'D)";
-            ExitShadow.text = ExitText.text;
-
-            //Options button
-            OptionsText.text   = "OPSHUNZ (YUMMY) →";
-            OptionsShadow.text = OptionsText.text;
-
-            //Back button within scrolling list
-            content.transform.Find("Back/Text").GetComponent<Text>().text = "← BCAK";
-
-            //Mod list button
-            ListText.gameObject.GetComponent<Text>().text   = "MDO LITS";
-            ListShadow.gameObject.GetComponent<Text>().text = "MDO LITS";
-        }
-
         if (retromodeWarning)
             retromodeWarning.SetActive(GlobalControls.retroMode);
 
@@ -351,9 +333,6 @@ public class SelectOMatic : MonoBehaviour {
             // List # of encounters, or name of encounter if there is only one
             if (encounters.Length == 1) {
                 EncounterCount.GetComponent<Text>().text = encounters[0];
-                // Crate Your Frisk version
-                if (GlobalControls.crate)
-                    EncounterCount.GetComponent<Text>().text = Temmify.Convert(encounters[0],  true);
 
                 // Make clicking the bg directly open the encounter
                 ModBackground.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -365,9 +344,6 @@ public class SelectOMatic : MonoBehaviour {
                 });
             } else {
                 EncounterCount.GetComponent<Text>().text = "Has " + encounters.Length + " encounters";
-                // Crate Your Frisk version
-                if (GlobalControls.crate)
-                    EncounterCount.GetComponent<Text>().text = "HSA " + encounters.Length + " ENCUOTNERS";
             }
             EncounterCountShadow.GetComponent<Text>().text = EncounterCount.GetComponent<Text>().text;
         } else {
@@ -387,17 +363,11 @@ public class SelectOMatic : MonoBehaviour {
 
             // List # of mods
             EncounterCount.GetComponent<Text>().text = "Has " + modPage.deepLinkedMods + " mods";
-            // Crate Your Frisk version
-            if (GlobalControls.crate)
-                EncounterCount.GetComponent<Text>().text = "HSA " + modPage.deepLinkedMods + " MDOS";
             EncounterCountShadow.GetComponent<Text>().text = EncounterCount.GetComponent<Text>().text;
         }
 
         // Update the text
         ModTitle.GetComponent<Text>().text = modPage.path.Name;
-        // Crate Your Frisk version
-        if (GlobalControls.crate)
-            ModTitle.GetComponent<Text>().text = Temmify.Convert(modPage.path.Name, true);
         ModTitleShadow.GetComponent<Text>().text = ModTitle.GetComponent<Text>().text;
 
         // Give the parent folder if the mod is nested
@@ -679,8 +649,6 @@ public class SelectOMatic : MonoBehaviour {
 
             // Set text
             button.transform.Find("Text").GetComponent<Text>().text = Path.GetFileNameWithoutExtension(encounter);
-            if (GlobalControls.crate)
-                button.transform.Find("Text").GetComponent<Text>().text = Temmify.Convert(Path.GetFileNameWithoutExtension(encounter), true);
 
             // Finally, set function!
             string filename = Path.GetFileNameWithoutExtension(encounter);
@@ -757,8 +725,6 @@ public class SelectOMatic : MonoBehaviour {
 
             // Set text
             button.transform.Find("Text").GetComponent<Text>().text = modPage.path.Name;
-            if (GlobalControls.crate)
-                button.transform.Find("Text").GetComponent<Text>().text = Temmify.Convert(modPage.path.Name, true);
 
             // Set extra nesting elements
             if (modPage.nestLevel > 0)

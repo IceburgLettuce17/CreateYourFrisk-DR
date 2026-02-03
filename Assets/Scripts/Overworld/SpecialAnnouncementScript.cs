@@ -95,7 +95,7 @@ public class SpecialAnnouncementScript : MonoBehaviour {
         new ControlPanel();
         new PlayerCharacter();
         #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-            Misc.WindowName = GlobalControls.crate ? ControlPanel.instance.WinodwBsaisNmae : ControlPanel.instance.WindowBasisName;
+            Misc.WindowName = ControlPanel.instance.WindowBasisName;
         #endif
         // Load CYF's permanent globals
         SaveLoad.LoadPermanentGlobals();

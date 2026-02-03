@@ -22,7 +22,6 @@ public class GlobalControls : MonoBehaviour {
 
     public static string realName;      // Player's name in the overworld, given through the scene EnterName
     public static bool modDev;          // True if we entered the mod selection screen and not the overworld, false otherwise
-    public static bool crate;           // True if CrateYourFrisk mode is active, false otherwise
     public static bool retroMode;       // True if the Unitale 0.2.1a retrocompatibility mode is active, false otherwise
     public static bool stopScreenShake; // Used to stop any screenshake currently ongoing
     public static bool isInFight;       // True if we're in a battle, false otherwise
@@ -36,6 +35,9 @@ public class GlobalControls : MonoBehaviour {
     public static Dictionary<string, GameState.MapData> GameMapData = new Dictionary<string, GameState.MapData>();              // Main save data on each map the Player has visited before
     public static Dictionary<string, GameState.EventInfos> EventData = new Dictionary<string, GameState.EventInfos>();          // Data stored for each event in the current map, used for data saving
     public static Dictionary<string, GameState.TempMapData> TempGameMapData = new Dictionary<string, GameState.TempMapData>();  // Data used to save changes applied to maps the Player hasn't visited yet
+	
+	public static bool debug; // True if debug mode is active, false otherwise
+	public static bool errorBypass; // True if error bypassing is active, false otherwise
 
     private static bool awakened;   // Used to only run Awake() once
 
@@ -55,8 +57,7 @@ public class GlobalControls : MonoBehaviour {
         // Load map names for the overworld
         UnitaleUtil.AddKeysToMapCorrespondanceList();
 
-        // Use permanent globals to load Crate Your Frisk, Safe Mode, Retromode and Fullscreen mode preferences
-        ReloadCrate();
+        // Use permanent globals to load Safe Mode, Retromode and Fullscreen mode preferences
 
         // Check if safe mode has a stored preference that is a boolean
         if (LuaScriptBinder.GetPermanentGlobal("CYFSafeMode") != null
@@ -84,14 +85,6 @@ public class GlobalControls : MonoBehaviour {
         DiscordControls.Start();
 
         awakened = true;
-    }
-
-    public static void ReloadCrate() {
-        if (LuaScriptBinder.GetPermanentGlobal("CrateYourFrisk") != null && LuaScriptBinder.GetPermanentGlobal("CrateYourFrisk").Boolean)
-            crate = true;
-        #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-            Misc.WindowName = crate ? ControlPanel.instance.WinodwBsaisNmae : ControlPanel.instance.WindowBasisName;
-        #endif
     }
 
     #if UNITY_STANDALONE_WIN && !UNITY_EDITOR

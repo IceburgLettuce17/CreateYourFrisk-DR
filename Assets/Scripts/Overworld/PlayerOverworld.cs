@@ -541,8 +541,13 @@ public class PlayerOverworld : MonoBehaviour {
             }
             switch (encounterNames.Count) {
                 case 0:
-                    UnitaleUtil.DisplayLuaError("Overworld System", "There's no valid encounter to launch.\nYou need to have at least 1 encounter in your mod that doesn't have a '#' as its first character!");
-                    yield break;
+					if (GlobalControls.errorBypass==false)
+					{
+						UnitaleUtil.DisplayLuaError("Overworld System", "There's no valid encounter to launch.\nYou need to have at least 1 encounter in your mod that doesn't have a '#' as its first character!");
+						yield break;
+					} 
+					yield break;
+
                 case 1:
                     Encounter = Path.GetFileNameWithoutExtension(encounterNames[0].ToString());
                     break;
@@ -683,21 +688,13 @@ public class PlayerOverworld : MonoBehaviour {
         GameObject.Find("menuchoice_interior").GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         txtmgrs[0].SetText(new TextMessage("" + PlayerCharacter.instance.Name, false, true));
-        if (GlobalControls.crate) {
-            txtmgrs[1].SetText(new TextMessage("[font:menu]LV " + PlayerCharacter.instance.LV, false, true));
-            txtmgrs[2].SetText(new TextMessage("[font:menu]PH " + (int)PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
-            txtmgrs[3].SetText(new TextMessage("[font:menu]G  " + PlayerCharacter.instance.Gold, false, true));
-            txtmgrs[4].SetText(new TextMessage((Inventory.inventory.Count > 0 ? "" : "[color:808080]") + "TEM", false, true));
-            txtmgrs[5].SetText(new TextMessage("TAST", false, true));
-            txtmgrs[6].SetText(new TextMessage("LECL", false, true));
-        } else {
-            txtmgrs[1].SetText(new TextMessage("[font:menu]LV " + PlayerCharacter.instance.LV, false, true));
-            txtmgrs[2].SetText(new TextMessage("[font:menu]HP " + (int)PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
-            txtmgrs[3].SetText(new TextMessage("[font:menu]G  " + PlayerCharacter.instance.Gold, false, true));
-            txtmgrs[4].SetText(new TextMessage((Inventory.inventory.Count > 0 ? "" : "[color:808080]") + "ITEM", false, true));
-            txtmgrs[5].SetText(new TextMessage("STAT", false, true));
-            txtmgrs[6].SetText(new TextMessage("CELL", false, true));
-        }
+		txtmgrs[1].SetText(new TextMessage("[font:menu]LV " + PlayerCharacter.instance.LV, false, true));
+		txtmgrs[2].SetText(new TextMessage("[font:menu]HP " + (int)PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
+		txtmgrs[3].SetText(new TextMessage("[font:menu]G  " + PlayerCharacter.instance.Gold, false, true));
+		txtmgrs[4].SetText(new TextMessage((Inventory.inventory.Count > 0 ? "" : "[color:808080]") + "ITEM", false, true));
+		txtmgrs[5].SetText(new TextMessage("STAT", false, true));
+		txtmgrs[6].SetText(new TextMessage("CELL", false, true));
+		
         GameObject.Find("Mugshot").GetComponent<Image>().color = new Color(1, 1, 1, 0);
         GameObject.Find("textframe_border_outer").GetComponent<Image>().color = new Color(1, 1, 1, 0);
         GameObject.Find("textframe_interior").GetComponent<Image>().color = new Color(0, 0, 0, 0);
@@ -726,14 +723,9 @@ public class PlayerOverworld : MonoBehaviour {
                             } else {
                                 for (int i = 0; i != invCount; i++)
                                     txtmgrs[i + 7].SetText(new TextMessage(Inventory.inventory[i].Name, false, true));
-                                if (GlobalControls.crate) {
-                                    txtmgrs[15].SetText(new TextMessage("SUE",  false, true));
-                                    txtmgrs[16].SetText(new TextMessage("FINO", false, true));
-                                    txtmgrs[17].SetText(new TextMessage("DORP", false, true));
-                                } else {
-                                    txtmgrs[15].SetText(new TextMessage("USE",  false, true));
-                                    txtmgrs[16].SetText(new TextMessage("INFO", false, true));
-                                    txtmgrs[17].SetText(new TextMessage("DROP", false, true));
+                                txtmgrs[15].SetText(new TextMessage("USE",  false, true));
+                                txtmgrs[16].SetText(new TextMessage("INFO", false, true));
+                                txtmgrs[17].SetText(new TextMessage("DROP", false, true));
                                 }
                                 GameObject.Find("Mugshot").GetComponent<Image>().color                = new Color(1, 1, 1, 0);
                                 GameObject.Find("textframe_border_outer").GetComponent<Image>().color = new Color(1, 1, 1, 0);
@@ -799,22 +791,13 @@ public class PlayerOverworld : MonoBehaviour {
                                                         instance.textmgr.SetEffect(null);
                                                         Inventory.UseItem(index);
                                                         //Update the stat text managers again, which means you can see the item's effects immediately
-                                                        txtmgrs[0].SetText(new TextMessage("" + PlayerCharacter.instance.Name, false, true));
-                                                        if (GlobalControls.crate) {
-                                                            txtmgrs[1].SetText(new TextMessage("[font:menu]LV " + PlayerCharacter.instance.LV, false, true));
-                                                            txtmgrs[2].SetText(new TextMessage("[font:menu]PH " + (int)PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
-                                                            txtmgrs[3].SetText(new TextMessage("[font:menu]G  " + PlayerCharacter.instance.Gold, false, true));
-                                                            txtmgrs[4].SetText(new TextMessage((Inventory.inventory.Count > 0 ? "" : "[color:808080]") + "TEM", false, true));
-                                                            txtmgrs[5].SetText(new TextMessage("TAST", false, true));
-                                                            txtmgrs[6].SetText(new TextMessage("LECL", false, true));
-                                                        } else {
-                                                            txtmgrs[1].SetText(new TextMessage("[font:menu]LV " + PlayerCharacter.instance.LV, false, true));
-                                                            txtmgrs[2].SetText(new TextMessage("[font:menu]HP " + (int)PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
-                                                            txtmgrs[3].SetText(new TextMessage("[font:menu]G  " + PlayerCharacter.instance.Gold, false, true));
-                                                            txtmgrs[4].SetText(new TextMessage((Inventory.inventory.Count > 0 ? "" : "[color:808080]") + "ITEM", false, true));
-                                                            txtmgrs[5].SetText(new TextMessage("STAT", false, true));
-                                                            txtmgrs[6].SetText(new TextMessage("CELL", false, true));
-                                                        }
+														txtmgrs[0].SetText(new TextMessage("" + PlayerCharacter.instance.Name, false, true));
+                                                        txtmgrs[1].SetText(new TextMessage("[font:menu]LV " + PlayerCharacter.instance.LV, false, true));
+                                                        txtmgrs[2].SetText(new TextMessage("[font:menu]HP " + (int)PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
+                                                        txtmgrs[3].SetText(new TextMessage("[font:menu]G  " + PlayerCharacter.instance.Gold, false, true));
+														txtmgrs[4].SetText(new TextMessage((Inventory.inventory.Count > 0 ? "" : "[color:808080]") + "ITEM", false, true));
+														txtmgrs[5].SetText(new TextMessage("STAT", false, true));
+														txtmgrs[6].SetText(new TextMessage("CELL", false, true));
                                                         break;
                                                     case 1:
                                                         string str;
@@ -825,8 +808,7 @@ public class PlayerOverworld : MonoBehaviour {
                                                         break;
                                                     case 2:
                                                         instance.textmgr.SetEffect(null);
-                                                        instance.textmgr.SetText(new TextMessage(GlobalControls.crate ? ("U DORPED TEH " + Inventory.inventory[index].Name + "!!!!!")
-                                                                                                                      : "You dropped the " + Inventory.inventory[index].Name + ".", true, false));
+                                                        instance.textmgr.SetText(new TextMessage("You dropped the " + Inventory.inventory[index].Name + ".", true, false));
                                                         instance.textmgr.transform.parent.parent.SetAsLastSibling();
                                                         Inventory.RemoveItem(index);
                                                         break;
@@ -842,30 +824,20 @@ public class PlayerOverworld : MonoBehaviour {
                                 }
                             }
                             break;
-                        }
                         case 1: {
                             // STAT
                             GameObject.Find("utHeartMenu").GetComponent<Image>().color = new Color(c.r, c.g, c.b, 0);
                             txtmgrs[18].SetText(new TextMessage("\"" + PlayerCharacter.instance.Name      + "\"",                           false, true));
                             txtmgrs[19].SetText(new TextMessage("LV "                                     + PlayerCharacter.instance.LV,    false, true));
                             txtmgrs[20].SetText(new TextMessage("HP " + PlayerCharacter.instance.HP + "/" + PlayerCharacter.instance.MaxHP, false, true));
-                            if (GlobalControls.crate) {
-                                txtmgrs[21].SetText(new TextMessage("TA " + (PlayerCharacter.instance.ATK + PlayerCharacter.instance.WeaponATK) + " (" + PlayerCharacter.instance.WeaponATK + ")", false, true));
-                                txtmgrs[22].SetText(new TextMessage("DF " + (PlayerCharacter.instance.DEF + PlayerCharacter.instance.ArmorDEF) + " (" + PlayerCharacter.instance.ArmorDEF + ")", false, true));
-                                txtmgrs[23].SetText(new TextMessage("EPX: " + PlayerCharacter.instance.EXP, false, true));
-                                txtmgrs[24].SetText(new TextMessage("NETX: " + PlayerCharacter.instance.GetNext(), false, true));
-                                txtmgrs[25].SetText(new TextMessage("WAEPON: " + PlayerCharacter.instance.Weapon, false, true));
-                                txtmgrs[26].SetText(new TextMessage("AROMR: " + PlayerCharacter.instance.Armor, false, true));
-                                txtmgrs[27].SetText(new TextMessage("GLOD: " + PlayerCharacter.instance.Gold, false, true));
-                            } else {
-                                txtmgrs[21].SetText(new TextMessage("AT " + (PlayerCharacter.instance.ATK + PlayerCharacter.instance.WeaponATK) + " (" + PlayerCharacter.instance.WeaponATK + ")", false, true));
-                                txtmgrs[22].SetText(new TextMessage("DF " + (PlayerCharacter.instance.DEF + PlayerCharacter.instance.ArmorDEF) + " (" + PlayerCharacter.instance.ArmorDEF + ")", false, true));
-                                txtmgrs[23].SetText(new TextMessage("EXP: " + PlayerCharacter.instance.EXP, false, true));
-                                txtmgrs[24].SetText(new TextMessage("NEXT: " + PlayerCharacter.instance.GetNext(), false, true));
-                                txtmgrs[25].SetText(new TextMessage("WEAPON: " + PlayerCharacter.instance.Weapon, false, true));
-                                txtmgrs[26].SetText(new TextMessage("ARMOR: " + PlayerCharacter.instance.Armor, false, true));
-                                txtmgrs[27].SetText(new TextMessage("GOLD: " + PlayerCharacter.instance.Gold, false, true));
-                            }
+							txtmgrs[21].SetText(new TextMessage("AT " + (PlayerCharacter.instance.ATK + PlayerCharacter.instance.WeaponATK) + " (" + PlayerCharacter.instance.WeaponATK + ")", false, true));
+							txtmgrs[22].SetText(new TextMessage("DF " + (PlayerCharacter.instance.DEF + PlayerCharacter.instance.ArmorDEF) + " (" + PlayerCharacter.instance.ArmorDEF + ")", false, true));
+							txtmgrs[23].SetText(new TextMessage("EXP: " + PlayerCharacter.instance.EXP, false, true));
+						txtmgrs[24].SetText(new TextMessage("NEXT: " + PlayerCharacter.instance.GetNext(), false, true));
+							txtmgrs[25].SetText(new TextMessage("WEAPON: " + PlayerCharacter.instance.Weapon, false, true));
+							txtmgrs[26].SetText(new TextMessage("ARMOR: " + PlayerCharacter.instance.Armor, false, true));
+							txtmgrs[27].SetText(new TextMessage("GOLD: " + PlayerCharacter.instance.Gold, false, true));
+
                             GameObject.Find("Mugshot").GetComponent<Image>().color                = new Color(1, 1, 1, 0);
                             GameObject.Find("textframe_border_outer").GetComponent<Image>().color = new Color(1, 1, 1, 0);
                             GameObject.Find("textframe_interior").GetComponent<Image>().color     = new Color(0, 0, 0, 0);
@@ -891,7 +863,7 @@ public class PlayerOverworld : MonoBehaviour {
                         default: //CELL
                             yield return CloseMenu();
                             instance.textmgr.SetEffect(null);
-                            instance.textmgr.SetText(new TextMessage(GlobalControls.crate ? "NO CELPLHONE ALOLWDE!!!" : "But you don't have a cellphone... [w:10]yet.", true, false));
+                            instance.textmgr.SetText(new TextMessage("But you don't have a cellphone... [w:10]yet.", true, false));
                             instance.textmgr.transform.parent.parent.SetAsLastSibling();
                             break;
                     }

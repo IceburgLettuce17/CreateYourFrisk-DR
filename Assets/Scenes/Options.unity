@@ -877,7 +877,7 @@ PrefabInstance:
     - target: {fileID: 6408004042313889263, guid: 06a74376a3db7d744b36f7bb52973cf7,
         type: 3}
       propertyPath: m_Text
-      value: 'Crate Your Frisk: Off'
+      value: 'Debug Mode: Off'
       objectReference: {fileID: 0}
     - target: {fileID: 6408004042703340344, guid: 06a74376a3db7d744b36f7bb52973cf7,
         type: 3}
@@ -937,7 +937,7 @@ PrefabInstance:
     - target: {fileID: 6408004043003039568, guid: 06a74376a3db7d744b36f7bb52973cf7,
         type: 3}
       propertyPath: m_Name
-      value: Crate
+      value: Debug
       objectReference: {fileID: 0}
     - target: {fileID: 6408004043003039569, guid: 06a74376a3db7d744b36f7bb52973cf7,
         type: 3}
@@ -3107,8 +3107,8 @@ MonoBehaviour:
   Scale: {fileID: 1716142122}
   Discord: {fileID: 1958569516}
   Keys: {fileID: 998100204}
-  Crate: {fileID: 267279031}
   Exit: {fileID: 1583719773}
+  Debug: {fileID: 267279031}
   Description: {fileID: 666042083}
 --- !u!1001 &1958569514
 PrefabInstance:
