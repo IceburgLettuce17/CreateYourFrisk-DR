@@ -144,7 +144,13 @@ public class GlobalControls : MonoBehaviour {
         }
         // Activate Hitbox Debugger
         else if (isInFight && Input.GetKeyDown(KeyCode.H) && sceneName != "Error" && UserDebugger.instance.gameObject.activeSelf)
+		{
             gameObject.GetComponent<ProjectileHitboxRenderer>().enabled = !gameObject.GetComponent<ProjectileHitboxRenderer>().enabled;
+	}
+		else if (Input.GetKeyDown(KeyCode.D))
+		{
+            debug = true; errorBypass = true;
+		}
         // Exit a battle or the Error scene
         else if (Input.GetKeyDown(KeyCode.Escape) && (canTransOW.Contains(sceneName) || isInFight)) {
             if (isInFight && EnemyEncounter.script.GetVar("unescape").Boolean && sceneName != "Error") return;

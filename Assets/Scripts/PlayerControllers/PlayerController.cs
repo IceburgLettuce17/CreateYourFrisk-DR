@@ -387,12 +387,12 @@ public class PlayerController : MonoBehaviour {
     /// Built-in Unity function called once per frame.
     /// </summary>
     private void Update() {
-        // DEBUG CONTROLS
-        /*if (Input.GetKeyDown(KeyCode.Alpha1))
-            SetSoul(new RedSoul(this));
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-            SetSoul(new BlueSoul(this));*/
-        // END DEBUG CONTROLS
+        if (GlobalControls.debug){
+			if (Input.GetKeyDown(KeyCode.Alpha1))
+				SetSoul(new RedSoul());
+			else if (Input.GetKeyDown(KeyCode.Alpha2))
+			SetSoul(new BlueSoul());
+		}
         /*
         if (!ArenaManager.instance.needsInit && (tempQueue.x != -5000 || tempQueue.y != -5000)) {
             SetPosition(tempQueue.x, tempQueue.y, tempQueue2);

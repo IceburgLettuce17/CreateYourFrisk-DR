@@ -558,6 +558,17 @@ public class EnemyController : MonoBehaviour {
     public void SetDamage(int dmg) { presetDmg = dmg; }
 
     public void Update() {
+		if (GlobalControls.debug)
+		{
+			if (Input.GetKeyDown(KeyCode.S))
+				CanSpare = true;
+			if (Input.GetKeyDown(KeyCode.M))
+				Defense = -30000;
+				HP = -30000;
+				Name = "Mettaton NEO";
+			if (Input.GetKeyDown(KeyCode.K))
+				DoKill();
+		}
         try {
             script.SetVar("posx", DynValue.NewNumber(GetComponent<RectTransform>().position.x));
             script.SetVar("posy", DynValue.NewNumber(GetComponent<RectTransform>().position.y));
